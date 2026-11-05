@@ -22,6 +22,8 @@ jobs:
           node-version: 22
       - name: Regenerate lockfile from package.json
         run: npm install --package-lock-only --ignore-scripts
+      - name: Apply non-breaking security fixes to lockfile
+        run: npm audit fix --package-lock-only --ignore-scripts
       - name: Generate npm security audit
         run: npm audit --json > npm-audit.json || true
       - name: Summarize audit findings

@@ -9,7 +9,7 @@ test('exam landing page renders and its version switch works', async ({ page }) 
   await expect(page.getByRole('heading', { name: 'Benchmark Instructions' })).toBeVisible();
 
   await page.getByRole('button', { name: /Previous Exam/i }).click();
-  await expect(page.getByText('K-AARB v1.0 (Q1/Q2 2026)')).toBeVisible();
+  await expect(page.getByText('K-AARB v1.0 (Q1/Q2 2026)').first()).toBeVisible();
   expect(pageErrors).toEqual([]);
 });
 

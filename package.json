@@ -1,5 +1,5 @@
 {
-  "name": "kazira.io",
+  "name": "kaarb",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -18,7 +18,7 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.2",
-    "tailwindcss": "^4.2.1"
+    "tailwindcss": "^4.2.0"
   },
   "devDependencies": {
     "@types/node": "^22.14.0",

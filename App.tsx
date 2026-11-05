@@ -10,6 +10,7 @@ const ClaudeQ2ExamResponse = lazy(() => import('./pages/ClaudeQ2ExamResponse'));
 const ClaudeSonnet5Q3ExamResponse = lazy(() => import('./pages/ClaudeSonnet5Q3ExamResponse'));
 const QwenExamResponse = lazy(() => import('./pages/QwenExamResponse'));
 const QwenQ2ExamResponse = lazy(() => import('./pages/QwenQ2ExamResponse'));
+const QwenQ3ExamResponse = lazy(() => import('./pages/QwenQ3ExamResponse'));
 const ChatGPTExamResponse = lazy(() => import('./pages/ChatGPTExamResponse'));
 const ChatGPTQ2ExamResponse = lazy(() => import('./pages/ChatGPTQ2ExamResponse'));
 const ChatGPTGPT5Q3ExamResponse = lazy(() => import('./pages/ChatGPTGPT5Q3ExamResponse'));
@@ -17,6 +18,7 @@ const DeepSeekExamResponse = lazy(() => import('./pages/DeepSeekExamResponse'));
 const DeepSeekQ2ExamResponse = lazy(() => import('./pages/DeepSeekQ2ExamResponse'));
 const DeepSeekQ3ExamResponse = lazy(() => import('./pages/DeepSeekQ3ExamResponse'));
 const PerplexityExamResponse = lazy(() => import('./pages/PerplexityExamResponse'));
+const PerplexityQ2ExamResponse = lazy(() => import('./pages/PerplexityQ2ExamResponse'));
 const PerplexityQ3ExamResponse = lazy(() => import('./pages/PerplexityQ3ExamResponse'));
 const GeminiExamResponse = lazy(() => import('./pages/GeminiExamResponse'));
 const GeminiQ2ExamResponse = lazy(() => import('./pages/GeminiQ2ExamResponse'));
@@ -30,6 +32,7 @@ const MistralQ3ExamResponse = lazy(() => import('./pages/MistralQ3ExamResponse')
 const KimiExamResponse = lazy(() => import('./pages/KimiExamResponse'));
 const KimiQ2ExamResponse = lazy(() => import('./pages/KimiQ2ExamResponse'));
 const CopilotExamResponse = lazy(() => import('./pages/CopilotExamResponse'));
+const CopilotQ2ExamResponse = lazy(() => import('./pages/CopilotQ2ExamResponse'));
 const CopilotQ3ExamResponse = lazy(() => import('./pages/CopilotQ3ExamResponse'));
 const MetaAIExamResponse = lazy(() => import('./pages/MetaAIExamResponse'));
 const MetaAIQ2ExamResponse = lazy(() => import('./pages/MetaAIQ2ExamResponse'));
@@ -66,6 +69,8 @@ const App = () => (
               <Route path="/claude-sonnet-5-q3-exam-response" element={<ClaudeSonnet5Q3ExamResponse />} />
               <Route path="/qwen-exam-response" element={<QwenExamResponse />} />
               <Route path="/qwen-q2-exam-response" element={<QwenQ2ExamResponse />} />
+              <Route path="/qwen-q3-exam-response" element={<QwenQ3ExamResponse />} />
+              <Route path="/qwen-3-8-max-q3-exam-response" element={<QwenQ3ExamResponse />} />
               <Route path="/chatgpt-exam-response" element={<ChatGPTExamResponse />} />
               <Route path="/chatgpt-q2-exam-response" element={<ChatGPTQ2ExamResponse />} />
               <Route path="/chatgpt-gpt5-q3-exam-response" element={<ChatGPTGPT5Q3ExamResponse />} />
@@ -73,6 +78,7 @@ const App = () => (
               <Route path="/deepseek-q2-exam-response" element={<DeepSeekQ2ExamResponse />} />
               <Route path="/deepseek-q3-exam-response" element={<DeepSeekQ3ExamResponse />} />
               <Route path="/perplexity-exam-response" element={<PerplexityExamResponse />} />
+              <Route path="/perplexity-q2-exam-response" element={<PerplexityQ2ExamResponse />} />
               <Route path="/perplexity-q3-exam-response" element={<PerplexityQ3ExamResponse />} />
               <Route path="/gemini-exam-response" element={<GeminiExamResponse />} />
               <Route path="/gemini-q2-exam-response" element={<GeminiQ2ExamResponse />} />
@@ -86,14 +92,11 @@ const App = () => (
               <Route path="/kimi-exam-response" element={<KimiExamResponse />} />
               <Route path="/kimi-q2-exam-response" element={<KimiQ2ExamResponse />} />
               <Route path="/copilot-exam-response" element={<CopilotExamResponse />} />
+              <Route path="/copilot-q2-exam-response" element={<CopilotQ2ExamResponse />} />
               <Route path="/copilot-q3-exam-response" element={<CopilotQ3ExamResponse />} />
               <Route path="/meta-ai-exam-response" element={<MetaAIExamResponse />} />
               <Route path="/meta-ai-q2-exam-response" element={<MetaAIQ2ExamResponse />} />
               <Route path="/meta-ai-q3-exam-response" element={<MetaAIQ3ExamResponse />} />
-              <Route path="/copilot-q2-exam-response" element={<Navigate to="/ai-model-results" replace />} />
-              <Route path="/perplexity-q2-exam-response" element={<Navigate to="/ai-model-results" replace />} />
-              <Route path="/qwen-q3-exam-response" element={<Navigate to="/ai-model-results" replace />} />
-              <Route path="/qwen-3-8-max-q3-exam-response" element={<Navigate to="/ai-model-results" replace />} />
               <Route path="/mistral-medium-3-5-q3-exam-response" element={<MistralQ3ExamResponse />} />
               <Route path="/deepseek-v4-1-flash-q3-exam-response" element={<DeepSeekQ3ExamResponse />} />
               <Route path="*" element={<Navigate to="/" replace />} />

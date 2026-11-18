@@ -1,0 +1,12 @@
+node_modules/
+dist/
+npm-audit.json
+test-results/
+playwright-report/
+blob-report/
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+.vercel

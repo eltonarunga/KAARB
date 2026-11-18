@@ -31,9 +31,10 @@ npm run dev
 ```bash
 npm run typecheck
 npm run build
+npm run test:e2e
 ```
 
-GitHub Actions runs the TypeScript check and Vite production build on pushes and pull requests targeting `main`.
+GitHub Actions runs `npm ci`, a security audit, the TypeScript check, the Vite production build and the Playwright browser smoke tests on pushes and pull requests targeting `main`. A separate workflow keeps `package-lock.json` synchronized with `package.json`.
 
 ## Main routes
 
@@ -73,4 +74,6 @@ tsconfig.json
 
 The application is separated from Kazira, its transcript pages are registered as lazy-loaded routes, and the current `main` commit has passed the GitHub Actions TypeScript check and Vite production build. The matching Vercel production deployment has reached the `READY` state.
 
-Remaining release-hardening work includes browser-based functional QA, dependency vulnerability triage, and reconciling the package lockfile with `package.json`.
+The lockfile is synchronized with `package.json` and browser smoke tests cover the landing page, navigation and transcript routes.
+
+Remaining release-hardening work: broaden browser functional QA beyond the smoke tests, and restore the CI audit gate to `--audit-level=high` once a patched `picomatch` is released (the current advisory affects build tooling only).
